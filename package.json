@@ -1,0 +1,33 @@
+{
+	"name"            : "alchemy-matomo",
+	"description"     : "The Matomo plugin for Alchemy",
+	"author"          : "Jelle De Loecker <jelle@elevenways.be>",
+	"version"         : "0.1.0-alpha",
+	"repository"      : "11ways/alchemy-matomo",
+	"license"         : "MIT",
+	"keywords"        : ["skeleton", "boilerplate", "alchemymvc"],
+	"contributors"    : [],
+	"dependencies"    : {
+		"matomo-tracker": "~2.2.4"
+	},
+	"devDependencies" : {
+		"alchemymvc" : "~1.3.0",
+		"codecov"    : "~3.7.2",
+		"mocha"      : "~8.0.1",
+		"mongo-unit" : "~2.0.1",
+		"nyc"        : "^15.1.0"
+	},
+	"peerDependencies": {
+		"alchemymvc" : ">=1.3.0"
+	},
+	"scripts": {
+		"test"            : "node_modules/.bin/mocha --exit --reporter spec --bail --timeout 5000 --file test/00-init.js",
+		"appveyor"        : "node_modules/.bin/mocha --exit --reporter spec --bail --timeout 20000 --file test/00-init.js",
+		"coverage"        : "node_modules/.bin/nyc --reporter=text --reporter=lcov mocha --exit --timeout 20000 --bail --file test/00-init.js",
+		"report-coverage" : "cat ./coverage/lcov.info | codecov"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"private": true
+}
