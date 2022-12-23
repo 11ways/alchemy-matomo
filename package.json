@@ -2,7 +2,7 @@
 	"name"            : "alchemy-matomo",
 	"description"     : "The Matomo plugin for Alchemy",
 	"author"          : "Jelle De Loecker <jelle@elevenways.be>",
-	"version"         : "0.1.0-alpha",
+	"version"         : "0.1.0",
 	"repository"      : "11ways/alchemy-matomo",
 	"license"         : "MIT",
 	"keywords"        : ["skeleton", "boilerplate", "alchemymvc"],
